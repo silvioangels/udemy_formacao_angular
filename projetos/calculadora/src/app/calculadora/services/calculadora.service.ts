@@ -12,7 +12,7 @@ import { Injectable } from '@angular/core';
 })
 export class CalculadoraService {
   constructor() { }
-  /** 
+  /**
    * Defini as constantes utilizadas
    * para identificar as operações de calculo
   */
