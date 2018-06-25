@@ -1,7 +1,7 @@
 /**
- * Serviço responsável por executar as operações da 
+ * Serviço responsável por executar as operações da
  * calculadora.
- * 
+ *
  * @author Márcio C. de Souza<contato@kazale.com>
  * @since 1.0.0
  */
@@ -11,19 +11,19 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CalculadoraService {
 
-  /* Define as constantes utilizadas 
+  /* Define as constantes utilizadas
      para identificar as operações de cálculo */
-  static readonly SOMA: string = '+';
-  static readonly SUBTRACAO: string = '-';
-  static readonly DIVISAO: string = '/';
-  static readonly MULTIPLICACAO: string = '*';
+  static readonly SOMA: String = '+';
+  static readonly SUBTRACAO: String = '-';
+  static readonly DIVISAO: String = '/';
+  static readonly MULTIPLICACAO: String = '*';
 
   constructor() { }
 
   /**
-   * Método que calcula uma operação matemática dado 
+   * Método que calcula uma operação matemática dado
    * dois números.
-   * Suporta as operações soma, subtração, divisão, 
+   * Suporta as operações soma, subtração, divisão,
    * e multiplicação.
    *
    * @param num1 number
@@ -32,26 +32,26 @@ export class CalculadoraService {
    * @return number Resultado da operação
    */
   calcular(num1: number, num2: number, operacao: string): number {
-  	let resultado: number; // armazena o resultado da operação
+  let resultado: number; // armazena o resultado da operação
 
-  	switch(operacao) {
-  	  case CalculadoraService.SOMA:
-  	    resultado = num1 + num2;
-  		break;
-  	  case CalculadoraService.SUBTRACAO:
-  	    resultado = num1 - num2;
-  		break;
-  	  case CalculadoraService.DIVISAO:
-  	    resultado = num1 / num2;
-  		break;
-  	  case CalculadoraService.MULTIPLICACAO:
-  	    resultado = num1 * num2;
-  		break;
-  	  default:
-  	    resultado = 0;
-  	}
+  switch (operacao) {
+    case CalculadoraService.SOMA:
+      resultado = num1 + num2;
+      break;
+    case CalculadoraService.SUBTRACAO:
+      resultado = num1 - num2;
+      break;
+    case CalculadoraService.DIVISAO:
+      resultado = num1 / num2;
+      break;
+    case CalculadoraService.MULTIPLICACAO:
+      resultado = num1 * num2;
+      break;
+    default:
+      resultado = 0;
+  }
 
-  	return resultado;
+  return resultado;
   }
 
 }
